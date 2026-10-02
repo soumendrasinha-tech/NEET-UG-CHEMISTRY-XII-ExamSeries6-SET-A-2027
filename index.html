@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumendra Sir's Biology Classes-8910587106 - NEET Chemistry CBT Exam</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for graphical performance breakdown -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- HTML2Canvas for capturing score card images -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for rendering chemical equations and formulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Anti-photo diagonal camera mesh overlay to hamper direct phone photos */
+        .anti-photo-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 0, transparent 6px),
+                repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 0, transparent 6px);
+        }
+
+        /* Dynamic floating candidate watermark grid */
+        .watermark-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9998;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            opacity: 0.13;
+            user-select: none;
+        }
+
+        .watermark-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-25deg);
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0f172a;
+            text-align: center;
+            white-space: pre-line;
+        }
+
+        /* Disable text selection across interface */
+        .no-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 no-select min-h-screen flex flex-col justify-between" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;">
+
+    <!-- Security Overlay Mesh & Dynamic Floating Watermark -->
+    <div class="anti-photo-overlay"></div>
+    <div id="watermarkGrid" class="watermark-container hidden"></div>
+
+    <!-- LOGIN / VERIFICATION MODAL GATE -->
+    <div id="verificationGate" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-6 md:p-8 border border-slate-200 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-600 via-teal-600 to-indigo-600"></div>
+            
+            <div class="text-center mb-6">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-teal-950 tracking-tight">Soumendra Sir's Biology Classes-8910587106</h1>
+                <p class="text-sm font-semibold text-slate-500 mt-1"><i class="fa-solid fa-phone mr-1"></i> Contact: +91 8910587106</p>
+                <div class="inline-block bg-teal-50 text-teal-800 text-xs font-bold px-3 py-1.5 rounded-full mt-3 border border-teal-200">
+                    NEET CHEMISTRY XII EXAM SERIES 6 SET A
+                </div>
+            </div>
+
+            <!-- Rules & Info Box -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 text-xs text-slate-700 space-y-2">
+                <p class="font-bold text-slate-900 border-b pb-1 text-sm"><i class="fa-solid fa-circle-info text-teal-600 mr-1.5"></i> Exam Instructions & Rules:</p>
+                <ul class="list-disc pl-4 space-y-1">
+                    <li><strong>Syllabus:</strong> Aldehydes, Ketones and Carboxylic Acids; Amines & Diazonium Salts.</li>
+                    <li><strong>Total Questions:</strong> 45 Questions | <strong>Total Marks:</strong> 180 Marks | <strong>Duration:</strong> 1 Hour (60 Mins).</li>
+                    <li><strong>Marking Scheme:</strong> <span class="text-emerald-700 font-bold">+4</span> for correct response, <span class="text-rose-600 font-bold">-1</span> for wrong response, <span class="text-slate-500 font-bold">0</span> for unattempted.</li>
+                    <li><strong>Anti-Cheating Rules:</strong> Fullscreen mode is mandatory. Switching tabs or exiting fullscreen triggers <span class="text-rose-600 font-bold">Auto-Submission</span>.</li>
+                    <li>Password format is today's date in <strong>DDMMYYYY</strong> format.</li>
+                </ul>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Candidate Name</label>
+                    <input type="text" id="candidateName" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none text-sm transition-all" />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Exam Password (DDMMYYYY)</label>
+                        <input type="password" id="examPassword" required placeholder="DDMMYYYY" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none text-sm transition-all" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Security Captcha</label>
+                        <div class="flex items-center space-x-2">
+                            <span id="captchaDisplay" class="bg-slate-200 text-slate-800 font-mono font-bold px-3 py-2.5 rounded-lg text-center tracking-widest text-sm border border-slate-300 select-none">3 + 5 = ?</span>
+                            <button type="button" onclick="generateCaptcha()" class="text-slate-500 hover:text-slate-700 p-2"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            <input type="text" id="captchaInput" required placeholder="Ans" class="w-20 px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-teal-500 focus:outline-none text-sm text-center font-bold" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loginError" class="hidden bg-rose-50 text-rose-700 text-xs font-semibold p-2.5 rounded-lg border border-rose-200 text-center"></div>
+
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-teal-700 to-indigo-700 hover:from-teal-800 hover:to-indigo-800 text-white font-bold rounded-xl shadow-lg transition-all text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-play"></i>
+                    <span>START CBT EXAMINATION</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CBT EXAM MAIN HEADER -->
+    <header class="bg-gradient-to-r from-teal-950 via-slate-900 to-indigo-950 text-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div>
+                <h1 class="text-base md:text-lg font-bold tracking-tight">Soumendra Sir's Biology Classes-8910587106</h1>
+                <p class="text-xs text-teal-200 font-medium">NEET CHEMISTRY XII EXAM SERIES 6 SET A | Aldehydes, Ketones, Carboxylic Acids & Amines</p>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-1.5 flex items-center space-x-2">
+                    <i class="fa-regular fa-clock text-amber-400 text-sm animate-pulse"></i>
+                    <span class="text-xs text-slate-300">Time Left:</span>
+                    <span id="timerDisplay" class="font-mono font-bold text-sm text-amber-300">60:00</span>
+                </div>
+                <div class="hidden sm:block bg-teal-950 border border-teal-800 rounded-lg px-3 py-1.5 text-xs text-right">
+                    <span class="text-slate-400 block text-[10px]">CANDIDATE</span>
+                    <span id="headerCandidateName" class="font-bold text-teal-200">Candidate Name</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CBT WORKSPACE -->
+    <main id="cbtMainInterface" class="max-w-7xl mx-auto w-full px-2 sm:px-4 py-4 flex-grow flex flex-col md:flex-row gap-4">
+        
+        <!-- LEFT PANEL: QUESTION CONTAINER -->
+        <section class="flex-grow bg-white rounded-xl shadow-md border border-slate-200 flex flex-col justify-between overflow-hidden">
+            
+            <!-- Question Box Header -->
+            <div class="bg-slate-50 border-b border-slate-200 px-4 py-3 flex justify-between items-center">
+                <span class="text-xs md:text-sm font-bold text-slate-700 bg-slate-200 px-3 py-1 rounded-md" id="questionNumberBadge">
+                    Question 1 of 45
+                </span>
+                <span class="text-xs font-semibold text-slate-500">
+                    Marks: <span class="text-emerald-600 font-bold">+4</span> | <span class="text-rose-600 font-bold">-1</span>
+                </span>
+            </div>
+
+            <!-- Question Body Area -->
+            <div class="p-4 md:p-6 overflow-y-auto max-h-[calc(100vh-260px)] min-h-[380px]" id="questionContentArea">
+                <!-- Dynamic Question Content Rendered Here -->
+            </div>
+
+            <!-- CBT Action Control Bar -->
+            <div class="bg-slate-50 border-t border-slate-200 px-4 py-3 flex flex-wrap gap-2 items-center justify-between">
+                <div class="flex gap-2">
+                    <button onclick="markForReview()" class="px-3 py-2 bg-amber-100 hover:bg-amber-200 text-amber-800 border border-amber-300 text-xs font-bold rounded-lg transition-all flex items-center space-x-1">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <span>Mark for Review</span>
+                    </button>
+                    <button onclick="clearResponse()" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-lg transition-all flex items-center space-x-1">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Clear Response</span>
+                    </button>
+                </div>
+
+                <div class="flex gap-2">
+                    <button onclick="prevQuestion()" id="prevBtn" class="px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white text-xs font-bold rounded-lg transition-all disabled:opacity-40">
+                        <i class="fa-solid fa-chevron-left mr-1"></i> Previous
+                    </button>
+                    <button onclick="nextQuestion()" id="nextBtn" class="px-4 py-2 bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold rounded-lg transition-all shadow-md">
+                        Save & Next <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT PANEL: COLOURFUL PALETTE DOTS -->
+        <aside class="w-full md:w-80 bg-white rounded-xl shadow-md border border-slate-200 p-4 flex flex-col justify-between min-w-[280px]">
+            <div>
+                <h2 class="text-sm font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3 flex justify-between items-center">
+                    <span><i class="fa-solid fa-table-cells text-teal-600 mr-1.5"></i> Question Palette</span>
+                </h2>
+
+                <!-- Status Legend -->
+                <div class="grid grid-cols-2 gap-2 text-[11px] mb-4 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block border border-emerald-600"></span>
+                        <span class="text-slate-600 font-medium">Answered (<span id="countAnswered">0</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block border border-rose-600"></span>
+                        <span class="text-slate-600 font-medium">Not Answered (<span id="countNotAnswered">45</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-amber-400 inline-block border border-amber-500"></span>
+                        <span class="text-slate-600 font-medium">Marked Review (<span id="countMarked">0</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-slate-200 inline-block border border-slate-300"></span>
+                        <span class="text-slate-600 font-medium">Not Visited (<span id="countNotVisited">44</span>)</span>
+                    </div>
+                </div>
+
+                <!-- Palette Grid Container -->
+                <div id="paletteGrid" class="grid grid-cols-5 gap-2 max-h-72 md:max-h-96 overflow-y-auto p-1 border rounded-lg border-slate-100">
+                    <!-- Dots Generated Dynamically -->
+                </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-200">
+                <button onclick="confirmSubmitTest()" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg shadow-md transition-all text-xs flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>SUBMIT TEST</span>
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- END RESULT & FEEDBACK REPORT (HIDDEN INITIALLY) -->
+    <div id="resultModal" class="hidden fixed inset-0 bg-slate-900 bg-opacity-95 z-50 overflow-y-auto p-4 flex items-center justify-center">
+        <div class="max-w-3xl w-full bg-white rounded-2xl shadow-2xl p-6 md:p-8 my-8 relative border border-slate-200">
+            
+            <!-- Result Card Container (Captured for Image) -->
+            <div id="resultCardCapture" class="p-4 bg-white rounded-xl border border-slate-200">
+                
+                <!-- Report Header -->
+                <div class="text-center border-b pb-4 mb-4">
+                    <h2 class="text-2xl font-extrabold text-teal-950">Soumendra Sir's Biology Classes-8910587106</h2>
+                    <p class="text-xs font-semibold text-slate-500">Contact: +91 8910587106 | NEET CHEMISTRY XII EXAM SERIES 6 SET A</p>
+                    <div class="mt-2 inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-emerald-300">
+                        OFFICIAL CHEMISTRY CBT SCORECARD
+                    </div>
+                </div>
+
+                <!-- Candidate Info Summary -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs mb-6">
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">CANDIDATE NAME</span>
+                        <span id="resCandidateName" class="font-bold text-slate-800">Candidate Name</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">TOTAL MARKS</span>
+                        <span id="resTotalScore" class="font-bold text-teal-700 text-base">0 / 180</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">TOTAL ATTEMPTED</span>
+                        <span id="resAttempted" class="font-bold text-slate-800">0 / 45</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">ACCURACY RATE</span>
+                        <span id="resAccuracy" class="font-bold text-emerald-600 text-base">0%</span>
+                    </div>
+                </div>
+
+                <!-- Graphical Representation & Detailed Breakdown -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
+                    <div class="w-full h-48 flex justify-center items-center">
+                        <canvas id="resultChart"></canvas>
+                    </div>
+
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between items-center p-2 rounded-md bg-emerald-50 border border-emerald-200">
+                            <span class="font-semibold text-emerald-800"><i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i> Correct Answers (+4)</span>
+                            <span id="resCorrect" class="font-bold text-emerald-800 text-sm">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 rounded-md bg-rose-50 border border-rose-200">
+                            <span class="font-semibold text-rose-800"><i class="fa-solid fa-circle-xmark text-rose-600 mr-1.5"></i> Incorrect Answers (-1)</span>
+                            <span id="resIncorrect" class="font-bold text-rose-800 text-sm">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 rounded-md bg-slate-100 border border-slate-200">
+                            <span class="font-semibold text-slate-700"><i class="fa-solid fa-circle-minus text-slate-400 mr-1.5"></i> Unattempted Questions (0)</span>
+                            <span id="resUnattempted" class="font-bold text-slate-700 text-sm">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-center text-slate-400 border-t pt-2">
+                    Generated automatically by NEET Chemistry CBT Exam System | Verified & Authenticated Report
+                </div>
+            </div>
+
+            <!-- WhatsApp Send Button -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <button onclick="sendMarksToWhatsApp()" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-all text-xs flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>SEND RESULT CARD TO SIR (+91 8910587106)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MASTER QUESTION BANK (45 QUESTIONS: Aldehydes, Ketones, Carboxylic Acids & Amines)
+        const masterQuestions = [
+            
+            // ================= 10 STATEMENT-BASED QUESTIONS =================
+            {
+                type: "statement",
+                id: 1,
+                q: "Select the correct option regarding Statement I and Statement II:",
+                statement1: "Aldehydes are generally more reactive than ketones towards nucleophilic addition reactions due to steric and electronic factors.",
+                statement2: "The presence of two alkyl groups in ketones reduces the electrophilicity of the carbonyl carbon compared to aldehydes.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 2,
+                q: "Evaluate the statements regarding Wolff-Kishner reduction and Clemmensen reduction:",
+                statement1: "Wolff-Kishner reduction uses $\\text{NH}_2\\text{NH}_2 / \\text{KOH}$ in ethylene glycol, making it suitable for acid-sensitive carbonyl compounds.",
+                statement2: "Clemmensen reduction uses $\\text{Zn(Hg)} / \\text{conc. HCl}$, which is preferred for base-sensitive carbonyl compounds.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 3,
+                q: "Consider the acidity of $\\alpha$-hydrogens in carbonyl compounds:",
+                statement1: "The $\\alpha$-hydrogens of aldehydes and ketones are acidic due to strong electron-withdrawing effect of the carbonyl group and resonance stabilization of the enolate ion.",
+                statement2: "Aldol condensation is given only by aldehydes and ketones that do not possess any $\\alpha$-hydrogen atoms.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 4,
+                q: "Read the statements regarding Cannizzaro reaction:",
+                statement1: "Aldehydes having no $\\alpha$-hydrogen undergo self-oxidation and reduction (disproportionation) on treatment with concentrated alkali.",
+                statement2: "Benzaldehyde on treatment with $50\\%$ $\\text{NaOH}$ yields benzyl alcohol and sodium benzoate.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 5,
+                q: "Evaluate the statements on acidic strength of Carboxylic Acids:",
+                statement1: "Trichloroacetic acid is a stronger acid than acetic acid because the $-I$ effect of chlorine atoms stabilizes the carboxylate anion.",
+                statement2: "Electron-donating groups like $-\\text{OCH}_3$ enhance the acidic strength of benzoic acid when present at para position.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 6,
+                q: "Consider the basic strength of aliphatic amines in aqueous medium:",
+                statement1: "In aqueous solution, the basic character order for methyl-substituted amines is $(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > (\\text{CH}_3)_3\\text{N} > \\text{NH}_3$.",
+                statement2: "The basic strength order in aqueous medium is governed solely by the $+I$ inductive effect of alkyl groups without any steric or solvation influence.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 7,
+                q: "Evaluate statements regarding Hinsberg Test for distinguishing amines:",
+                statement1: "Benzenesulphonyl chloride ($\text{C}_6\text{H}_5\text{SO}_2\text{Cl}$) reacts with primary amines to give a product soluble in alkali.",
+                statement2: "Secondary amines react with Hinsberg reagent to form an $N,N$-disubstituted sulphonamide which is completely insoluble in alkali.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 8,
+                q: "Read statements on Diazonium Salts:",
+                statement1: "Arenediazonium salts are stable in aqueous solution at room temperature ($25^\\circ\\text{C}$).",
+                statement2: "Diazotization of primary aromatic amines is carried out by treating with $\\text{NaNO}_2 + \\text{HCl}$ at $0 - 5^\\circ\\text{C}$ ($273 - 278\\text{ K}$).",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 3
+            },
+            {
+                type: "statement",
+                id: 9,
+                q: "Consider Chemical Tests for Aldehydes and Ketones:",
+                statement1: "Tollens' reagent (ammoniacal silver nitrate) oxidizes both aliphatic and aromatic aldehydes to form a bright silver mirror.",
+                statement2: "Fehling's test gives a reddish-brown precipitate of $\\text{Cu}_2\\text{O}$ with both aliphatic aldehydes and aromatic aldehydes.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 10,
+                q: "Evaluate statements on Carbylamine Reaction:",
+                statement1: "Only primary aliphatic and aromatic amines produce foul-smelling isocyanides on heating with $\\text{CHCl}_3$ and alcoholic $\\text{KOH}$.",
+                statement2: "Secondary and tertiary amines also give carbylamine test but require higher temperature.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+
+            // ================= 5 ASSERTION & REASONING QUESTIONS =================
+            {
+                type: "ar",
+                id: 11,
+                q: "Assertion (A): Aniline is less basic than methylamine.\nReason (R): In aniline, the lone pair of electrons on nitrogen is delocalized over the benzene ring through resonance, making it less available for protonation.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 12,
+                q: "Assertion (A): Nitration of aniline directly with nitrating mixture ($\text{conc. HNO}_3 + \text{conc. H}_2\text{SO}_4$) yields a significant amount ($47\%$) of $m$-nitroaniline.\nReason (R): In strongly acidic medium, aniline gets protonated to form anilinium ion, which is $m$-directing.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 13,
+                q: "Assertion (A): Acetaldehyde ($\text{CH}_3\text{CHO}$) gives positive iodoform test, whereas benzophenone ($\text{C}_6\text{H}_5\text{COC}_6\text{H}_5$) does not.\nReason (R): Iodoform test is given by compounds containing $\\text{CH}_3\\text{C}=\\text{O}$ group or $\\text{CH}_3\\text{CH(OH)}-$ group.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 14,
+                q: "Assertion (A): Carboxylic acids do not give characteristic reactions of carbonyl group like addition of $\text{NaHSO}_3$ or oxime formation.\nReason (R): Resonance in carboxylate group decreases the electrophilic character of carbonyl carbon due to electron release from oxygen of $-\\text{OH}$ group.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 15,
+                q: "Assertion (A): Boiling point of primary amines is higher than tertiary amines of isomeric molecular mass.\nReason (R): Tertiary amines lack hydrogen atoms directly attached to nitrogen, preventing intermolecular hydrogen bonding.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+
+            // ================= 5 CASE STUDY-BASED QUESTIONS =================
+            {
+                type: "case",
+                id: 16,
+                caseTitle: "CASE STUDY: Nucleophilic Addition Mechanism & Reactivity of Carbonyl Compounds",
+                caseText: "The polar nature of the carbonyl carbon ($>\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) makes it susceptible to attack by nucleophiles. The addition of ammonia derivatives ($\text{H}_2\text{N-Z}$) requires optimum pH ($3.5 - 4.5$). If the solution is too acidic, the nucleophile gets protonated ($\text{H}_3\text{N}^+-\text{Z}$) and loses its nucleophilicity. If it is too basic, the carbonyl group is not activated by protonation.",
+                q: "Which of the following carbonyl compounds exhibits maximum reactivity towards nucleophilic addition of $\\text{HCN}$?",
+                options: [
+                    "$\\text{HCHO}$ (Formaldehyde)",
+                    "$\\text{CH}_3\\text{CHO}$ (Acetaldehyde)",
+                    "$\\text{CH}_3\\text{COCH}_3$ (Acetone)",
+                    "$\\text{C}_6\\text{H}_5\\text{COCH}_3$ (Acetophenone)"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 17,
+                caseTitle: "CASE STUDY: Nucleophilic Addition Mechanism & Reactivity of Carbonyl Compounds",
+                caseText: "The polar nature of the carbonyl carbon ($>\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) makes it susceptible to attack by nucleophiles. The addition of ammonia derivatives ($\text{H}_2\text{N-Z}$) requires optimum pH ($3.5 - 4.5$). If the solution is too acidic, the nucleophile gets protonated ($\text{H}_3\text{N}^+-\text{Z}$) and loses its nucleophilicity. If it is too basic, the carbonyl group is not activated by protonation.",
+                q: "Semicarbazide contains two $-\\text{NH}_2$ groups ($\text{H}_2\text{N-NH-CONH}_2$). Which $-\\text{NH}_2$ group acts as nucleophile in reaction with benzaldehyde?",
+                options: [
+                    "The $-\\text{NH}_2$ group directly attached to $-\\text{NH}-$ group",
+                    "The $-\\text{NH}_2$ group attached to carbonyl group ($-\\text{C}=\\text{O}$)",
+                    "Both $-\\text{NH}_2$ groups react simultaneously",
+                    "Neither, only $-\\text{NH}-$ nitrogen reacts"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 18,
+                caseTitle: "CASE STUDY: Nucleophilic Addition Mechanism & Reactivity of Carbonyl Compounds",
+                caseText: "The polar nature of the carbonyl carbon ($>\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) makes it susceptible to attack by nucleophiles. The addition of ammonia derivatives ($\text{H}_2\text{N-Z}$) requires optimum pH ($3.5 - 4.5$). If the solution is too acidic, the nucleophile gets protonated ($\text{H}_3\text{N}^+-\text{Z}$) and loses its nucleophilicity. If it is too basic, the carbonyl group is not activated by protonation.",
+                q: "What product is formed when Benzaldehyde reacts with hydroxylamine ($\text{NH}_2\text{OH}$)?",
+                options: [
+                    "Benzaldoxime ($\text{C}_6\text{H}_5\text{CH}=\text{N-OH}$)",
+                    "Benzaldehyde hydrazone",
+                    "Benzamide",
+                    "Benzylamine"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 19,
+                caseTitle: "CASE STUDY: Nucleophilic Addition Mechanism & Reactivity of Carbonyl Compounds",
+                caseText: "The polar nature of the carbonyl carbon ($>\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) makes it susceptible to attack by nucleophiles. The addition of ammonia derivatives ($\text{H}_2\text{N-Z}$) requires optimum pH ($3.5 - 4.5$). If the solution is too acidic, the nucleophile gets protonated ($\text{H}_3\text{N}^+-\text{Z}$) and loses its nucleophilicity. If it is too basic, the carbonyl group is not activated by protonation.",
+                q: "Addition of Grignard reagent ($\text{RMgX}$) to Propanone followed by hydrolysis yields:",
+                options: [
+                    "Tertiary alcohol",
+                    "Secondary alcohol",
+                    "Primary alcohol",
+                    "Carboxylic acid"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 20,
+                caseTitle: "CASE STUDY: Nucleophilic Addition Mechanism & Reactivity of Carbonyl Compounds",
+                caseText: "The polar nature of the carbonyl carbon ($>\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) makes it susceptible to attack by nucleophiles. The addition of ammonia derivatives ($\text{H}_2\text{N-Z}$) requires optimum pH ($3.5 - 4.5$). If the solution is too acidic, the nucleophile gets protonated ($\text{H}_3\text{N}^+-\text{Z}$) and loses its nucleophilicity. If it is too basic, the carbonyl group is not activated by protonation.",
+                q: "Which reagent is known as Brady's Reagent used for detecting carbonyl compounds?",
+                options: [
+                    "2,4-Dinitrophenylhydrazine (2,4-DNP)",
+                    "Ammoniacal Silver Nitrate",
+                    "Alkaline $\\text{CuSO}_4$ with sodium potassium tartrate",
+                    "Schiff's Reagent"
+                ],
+                correct: 0
+            },
+
+            // ================= 25 NUMERICAL / CRITICAL THINKING QUESTIONS =================
+            {
+                type: "critical",
+                id: 21,
+                q: "An organic compound 'A' ($\text{C}_3\text{H}_6\text{O}$) gives a positive 2,4-DNP test but negative Tollens' test. 'A' reacts with $\text{I}_2 / \text{NaOH}$ to give a yellow precipitate 'B'. Identify 'A' and 'B':",
+                options: [
+                    "'A' = Propanone ($\text{CH}_3\text{COCH}_3$), 'B' = Iodoform ($\text{CHI}_3$)",
+                    "'A' = Propanal ($\text{CH}_3\text{CH}_2\text{CHO}$), 'B' = Iodoform ($\text{CHI}_3$)",
+                    "'A' = Propanone, 'B' = Chloroform ($\text{CHCl}_3$)",
+                    "'A' = Ethanol, 'B' = Iodoform"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 22,
+                q: "Arranging the following compounds in increasing order of their $pK_a$ values: (I) Benzoic acid, (II) 4-Nitrobenzoic acid, (III) 4-Methoxybenzoic acid, (IV) 4-Chlorobenzoic acid:",
+                options: [
+                    "II < IV < I < III",
+                    "III < I < IV < II",
+                    "I < II < III < IV",
+                    "II < I < IV < III"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 23,
+                q: "How many structural aldehyde and ketone isomers exist for the molecular formula $\\text{C}_5\\text{H}_{10}\\text{O}$?",
+                options: [
+                    "7 (4 aldehydes + 3 ketones)",
+                    "5 (3 aldehydes + 2 ketones)",
+                    "6 (3 aldehydes + 3 ketones)",
+                    "8 (5 aldehydes + 3 ketones)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 24,
+                q: "Predict the final product 'Z' in the reaction sequence:\n$\\text{Benzene} \\xrightarrow[\\text{Anhyd. AlCl}_3]{\\text{CH}_3\text{COCl}} X \\xrightarrow{\\text{Zn-Hg / conc. HCl}} Y \\xrightarrow[\\text{h}\\nu]{\\text{KMnO}_4 / \\text{KOH, } \\Delta} Z$",
+                options: [
+                    "Benzoic Acid ($\text{C}_6\text{H}_5\text{COOH}$)",
+                    "Ethylbenzene ($\text{C}_6\text{H}_5\text{CH}_2\text{CH}_3$)",
+                    "Acetophenone ($\text{C}_6\text{H}_5\text{COCH}_3$)",
+                    "Benzaldehyde ($\text{C}_6\text{H}_5\text{CHO}$)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 25,
+                q: "A primary amide 'A' ($\text{C}_3\text{H}_7\text{NO}$) undergoes Hofmann bromamide degradation to yield primary amine 'B'. How many moles of $\text{NaOH}$ and $\text{Br}_2$ are consumed per mole of amide 'A'?",
+                options: [
+                    "4 moles $\\text{NaOH}$ and 1 mole $\\text{Br}_2$",
+                    "2 moles $\\text{NaOH}$ and 2 moles $\\text{Br}_2$",
+                    "1 mole $\\text{NaOH}$ and 1 mole $\\text{Br}_2$",
+                    "4 moles $\\text{NaOH}$ and 2 moles $\\text{Br}_2$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 26,
+                q: "Identify the main product 'P' when Ethanenitrile ($\text{CH}_3\text{CN}$) reacts with $\text{SnCl}_2 / \text{HCl}$ followed by hydrolysis with boiling water (Stephen reaction):",
+                options: [
+                    "Acetaldehyde ($\text{CH}_3\text{CHO}$)",
+                    "Acetic acid ($\text{CH}_3\text{COOH}$)",
+                    "Ethylamine ($\text{CH}_3\text{CH}_2\text{NH}_2$)",
+                    "Ethanol ($\text{CH}_3\text{CH}_2\text{OH}$)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 27,
+                q: "Which amine will exhibit the highest boiling point among the following isomers of molecular formula $\\text{C}_4\\text{H}_{11}\\text{N}$?",
+                options: [
+                    "Butan-1-amine (Primary amine)",
+                    "$N$-Methylpropan-2-amine (Secondary amine)",
+                    "$N,N$-Dimethylethanamine (Tertiary amine)",
+                    "$N$-Ethylethanamine (Secondary amine)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 28,
+                q: "What is the correct order of basic strength in ethyl-substituted amines in aqueous medium?",
+                options: [
+                    "$(\\text{C}_2\\text{H}_5)_2\\text{NH} > (\\text{C}_2\\text{H}_5)_3\\text{N} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3$",
+                    "$(\\text{C}_2\\text{H}_5)_2\\text{NH} > \\text{C}_2\\text{H}_5\\text{NH}_2 > (\\text{C}_2\\text{H}_5)_3\\text{N} > \\text{NH}_3$",
+                    "$(\\text{C}_2\\text{H}_5)_3\\text{N} > (\\text{C}_2\\text{H}_5)_2\\text{NH} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3$",
+                    "$\\text{NH}_3 > \\text{C}_2\\text{H}_5\\text{NH}_2 > (\\text{C}_2\\text{H}_5)_2\\text{NH} > (\\text{C}_2\\text{H}_5)_3\\text{N}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 29,
+                q: "Benzenediazonium chloride reacts with Phenol in alkaline medium ($\text{pH } 9 - 10$) to form an azo dye 'X'. What is the color and formula of 'X'?",
+                options: [
+                    "Orange dye, $p$-hydroxyazobenzene",
+                    "Yellow dye, $p$-aminoazobenzene",
+                    "Red dye, $o$-hydroxyazobenzene",
+                    "Blue dye, aniline black"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 30,
+                q: "When Acetaldehyde is treated with dilute $\\text{NaOH}$, it forms 3-hydroxybutanal. Upon heating, it dehydrates to give product 'Y'. The IUPAC name of 'Y' is:",
+                options: [
+                    "But-2-enal",
+                    "But-3-enal",
+                    "Butan-2-one",
+                    "2-Methylpropanal"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 31,
+                q: "In the Hell-Volhard-Zelinsky (HVZ) reaction, Propanoic acid reacts with $\\text{Br}_2 / \\text{Red P}$ followed by $\\text{H}_2\\text{O}$ to yield:",
+                options: [
+                    "2-Bromopropanoic acid",
+                    "3-Bromopropanoic acid",
+                    "2,2-Dibromopropanoic acid",
+                    "Propanoyl bromide"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 32,
+                q: "An organic compound 'X' reacts with $\\text{PCl}_5$ to give 'Y'. 'Y' reacts with aqueous $\\text{NH}_3$ to give 'Z'. 'Z' on heating with $\\text{P}_2\\text{O}_5$ forms Acetonitrile ($\text{CH}_3\text{CN}$). Identify 'X':",
+                options: [
+                    "Acetic acid ($\text{CH}_3\text{COOH}$)",
+                    "Ethanol ($\text{CH}_3\text{CH}_2\text{OH}$)",
+                    "Acetaldehyde ($\text{CH}_3\text{CHO}$)",
+                    "Acetone ($\text{CH}_3\text{COCH}_3$)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 33,
+                q: "Crossed Cannizzaro reaction between Formaldehyde ($\text{HCHO}$) and Benzaldehyde ($\text{C}_6\text{H}_5\text{CHO}$) in presence of conc. $\\text{NaOH}$ gives:",
+                options: [
+                    "Sodium formate ($\text{HCOONa}$) and Benzyl alcohol ($\text{C}_6\text{H}_5\text{CH}_2\text{OH}$)",
+                    "Sodium benzoate ($\text{C}_6\text{H}_5\text{COONa}$) and Methanol ($\text{CH}_3\text{OH}$)",
+                    "Benzaldehyde and Formic acid",
+                    "Equal mixture of Sodium formate and Sodium benzoate"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 34,
+                q: "Which of the following aromatic compounds will NOT undergo coupling reaction with Benzenediazonium chloride at $0-5^\\circ\\text{C}$?",
+                options: [
+                    "Nitrobenzene",
+                    "Phenol",
+                    "Aniline",
+                    "$N,N$-Dimethylaniline"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 35,
+                q: "Calculate the mass of Acetamide ($\text{CH}_3\text{CONH}_2$, Molar mass = $59\\text{ g/mol}$) needed to produce $11.5\\text{ g}$ of Methylamine ($\text{CH}_3\text{NH}_2$, Molar mass = $31\\text{ g/mol}$) assuming $80\\%$ yield in Hofmann Bromamide reaction:",
+                options: [
+                    "\\approx $27.32\\text{ g}$",
+                    "\\approx $21.85\\text{ g}$",
+                    "\\approx $17.48\\text{ g}$",
+                    "\\approx $35.12\\text{ g}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 36,
+                q: "Aniline reacts with bromine water ($\text{Br}_2 / \text{H}_2\text{O}$) at room temperature to give a white precipitate 'P'. What is 'P'?",
+                options: [
+                    "2,4,6-Tribromoaniline",
+                    "4-Bromoaniline",
+                    "2-Bromoaniline",
+                    "2,4-Dibromoaniline"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 37,
+                q: "To prepare pure $p$-bromoaniline from aniline, aniline is first protected by acetylation with $(\text{CH}_3\text{CO})_2\text{O}$ / Pyridine. Why is this protection step essential?",
+                options: [
+                    "To decrease the activating influence of $-\\text{NH}_2$ group and prevent polysubstitution",
+                    "To increase the solubility of aniline in organic solvents",
+                    "To prevent oxidation of aniline by bromine",
+                    "To shift the reaction mechanism from electrophilic to nucleophilic"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 38,
+                q: "Ozonolysis of an alkene 'M' followed by reduction with $\\text{Zn} / \\text{H}_2\\text{O}$ yields equal moles of Acetone and Acetaldehyde. The IUPAC name of alkene 'M' is:",
+                options: [
+                    "2-Methylbut-2-ene",
+                    "2-Methylbut-1-ene",
+                    "Pent-2-ene",
+                    "2,3-Dimethylbut-2-ene"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 39,
+                q: "Identify reagent 'K' in the reaction: $\\text{Benzene diazonium chloride} \\xrightarrow{\\text{K}} \\text{Fluorobenzene} + \\text{N}_2 + \\text{BF}_3$:",
+                options: [
+                    "$\\text{HBF}_4$ (Fluoroboric acid) followed by heat (Schiemann reaction)",
+                    "$\\text{CuF} / \\text{HF}$",
+                    "$\\text{NaF} / \\text{HCl}$",
+                    "$\\text{AgF}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 40,
+                q: "Grabriel Phthalimide synthesis is used for the preparation of which class of amines?",
+                options: [
+                    "Primary aliphatic amines only",
+                    "Primary aromatic amines only",
+                    "Secondary aliphatic amines",
+                    "Tertiary aliphatic amines"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 41,
+                q: "What is the product formed when Benzoic acid is treated with $\\text{SOCl}_2$ followed by reaction with $\\text{NH}_3$ and subsequent heating with $\\text{P}_2\\text{O}_5$?",
+                options: [
+                    "Benzonitrile ($\text{C}_6\text{H}_5\text{CN}$)",
+                    "Benzamide ($\text{C}_6\text{H}_5\text{CONH}_2$)",
+                    "Benzylamine ($\text{C}_6\text{H}_5\text{CH}_2\text{NH}_2$)",
+                    "Aniline ($\text{C}_6\text{H}_5\text{NH}_2$)"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 42,
+                q: "Arrange the following in decreasing order of $pK_b$ values: (I) Aniline, (II) $N$-Methylaniline, (III) $N,N$-Dimethylaniline, (IV) Benzylamine:",
+                options: [
+                    "I > II > III > IV",
+                    "IV > III > II > I",
+                    "I > IV > II > III",
+                    "III > II > I > IV"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 43,
+                q: "Treatment of Benzaldehyde with acetic anhydride in the presence of sodium acetate yields cinnamic acid ($\text{C}_6\text{H}_5\text{CH}=\text{CHCOOH}$). This reaction is named as:",
+                options: [
+                    "Perkin Reaction",
+                    "Knoevenagel Reaction",
+                    "Reformatsky Reaction",
+                    "Benzoin Condensation"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 44,
+                q: "When 1 mole of Acetone reacts with 1 mole of Ethylene glycol in presence of dry $\\text{HCl}$ gas, the cyclic product formed is known as:",
+                options: [
+                    "Ethylene glycol ketal (1,3-Dioxolane derivative)",
+                    "Ethylene glycol acetal",
+                    "Hemiketal",
+                    "Aldol derivative"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 45,
+                q: "Reduction of Benzenediazonium chloride with $\\text{SnCl}_2 / \\text{HCl}$ yields:",
+                options: [
+                    "Phenylhydrazine ($\text{C}_6\text{H}_5\text{NHNH}_2$)",
+                    "Aniline ($\text{C}_6\text{H}_5\text{NH}_2$)",
+                    "Benzene ($\text{C}_6\text{H}_6$)",
+                    "Chlorobenzene ($\text{C}_6\text{H}_5\text{Cl}$)"
+                ],
+                correct: 0
+            }
+        ];
+
+        // GLOBAL APP STATE VARIABLES
+        let candidateName = "";
+        let shuffledQuestions = [];
+        let userAnswers = {}; // { qIndex: optionIndex }
+        let markedForReview = {}; // { qIndex: boolean }
+        let visitedQuestions = {}; // { qIndex: boolean }
+        let currentQIndex = 0;
+        let timerSeconds = 3600; // 1 Hour
+        let timerInterval = null;
+        let captchaAns = 0;
+        let examSubmitted = false;
+
+        // Initialize Captcha & Setup on Page Load
+        window.onload = function() {
+            generateCaptcha();
+        };
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 9) + 1;
+            const num2 = Math.floor(Math.random() * 9) + 1;
+            captchaAns = num1 + num2;
+            document.getElementById('captchaDisplay').innerText = `${num1} + ${num2} = ?`;
+        }
+
+        // SEED SHUFFLE ALGORITHM FOR UNIQUE CANDIDATE QUESTION SEQUENCE
+        function seedShuffle(array, seedString) {
+            let hash = 0;
+            for (let i = 0; i < seedString.length; i++) {
+                hash = seedString.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            
+            let result = [...array];
+            let m = result.length, t, i;
+            while (m) {
+                let pseudoRandom = Math.abs(Math.sin(hash++)) * 10000;
+                i = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * m--);
+                t = result[m];
+                result[m] = result[i];
+                result[i] = t;
+            }
+            return result;
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('candidateName').value.trim();
+            const passInput = document.getElementById('examPassword').value.trim();
+            const captchaInput = parseInt(document.getElementById('captchaInput').value.trim());
+            const errorDiv = document.getElementById('loginError');
+
+            errorDiv.classList.add('hidden');
+
+            // 1. Password Verification (Current Date DDMMYYYY format)
+            const now = new Date();
+            const dd = String(now.getDate()).padStart(2, '0');
+            const mm = String(now.getMonth() + 1).padStart(2, '0');
+            const yyyy = now.getFullYear();
+            const expectedPass = `${dd}${mm}${yyyy}`;
+
+            if (passInput !== expectedPass) {
+                errorDiv.innerText = `Invalid Password! Password must match today's date in DDMMYYYY format.`;
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+
+            // 2. Captcha Verification
+            if (captchaInput !== captchaAns) {
+                errorDiv.innerText = `Incorrect Captcha answer. Please try again.`;
+                errorDiv.classList.remove('hidden');
+                generateCaptcha();
+                return;
+            }
+
+            candidateName = nameInput;
+
+            // Seed shuffle question bank deterministically based on candidate name
+            shuffledQuestions = seedShuffle(masterQuestions, candidateName.toLowerCase());
+
+            // Update Header & Watermark Text
+            document.getElementById('headerCandidateName').innerText = candidateName;
+            document.getElementById('resCandidateName').innerText = candidateName;
+            
+            setupWatermark(candidateName);
+
+            // Hide Modal Gate & Launch Exam
+            document.getElementById('verificationGate').classList.add('hidden');
+
+            // Request Full Screen Enforcement
+            requestFullScreen();
+
+            // Start Exam Timer & Security Listeners
+            startTimer();
+            setupSecurityListeners();
+
+            // Render Palette & First Question
+            renderPalette();
+            loadQuestion(0);
+        }
+
+        function setupWatermark(name) {
+            const grid = document.getElementById('watermarkGrid');
+            grid.innerHTML = '';
+            grid.classList.remove('hidden');
+            for (let i = 0; i < 12; i++) {
+                const item = document.createElement('div');
+                item.className = 'watermark-item';
+                item.innerText = `${name}\nSoumendra Sir's Biology Classes - 8910587106`;
+                grid.appendChild(item);
+            }
+        }
+
+        function setupSecurityListeners() {
+            // Context menu block
+            document.addEventListener('contextmenu', e => e.preventDefault());
+
+            // Keydown block for inspect element & print screen
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'F12' || 
+                   (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                   (e.ctrlKey && e.key === 'u') ||
+                   e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Tab Switching / Visibility Change Auto-Submit
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && !examSubmitted) {
+                    alert("SECURITY VIOLATION: You switched tabs or minimized the window. Your exam is being submitted immediately.");
+                    forceSubmitTest();
+                }
+            });
+
+            // Fullscreen change detection
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement && !examSubmitted) {
+                    alert("SECURITY VIOLATION: You exited Full-Screen mode. The exam will now auto-submit.");
+                    forceSubmitTest();
+                }
+            });
+        }
+
+        function requestFullScreen() {
+            const docEl = document.documentElement;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen().catch(err => console.log(err));
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                if (timerSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's Up! Your exam is being submitted.");
+                    forceSubmitTest();
+                    return;
+                }
+                timerSeconds--;
+                const mins = Math.floor(timerSeconds / 60);
+                const secs = timerSeconds % 60;
+                document.getElementById('timerDisplay').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function renderPalette() {
+            const paletteGrid = document.getElementById('paletteGrid');
+            paletteGrid.innerHTML = '';
+
+            let countAnswered = 0;
+            let countNotAnswered = 0;
+            let countMarked = 0;
+            let countNotVisited = 0;
+
+            shuffledQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-8 h-8 rounded-full text-xs font-bold transition-all flex items-center justify-center shadow-sm border ';
+
+                const isAnswered = userAnswers[idx] !== undefined;
+                const isMarked = markedForReview[idx] === true;
+                const isVisited = visitedQuestions[idx] === true;
+
+                if (isMarked) {
+                    btn.classList.add('bg-amber-400', 'text-amber-950', 'border-amber-500');
+                    countMarked++;
+                } else if (isAnswered) {
+                    btn.classList.add('bg-emerald-500', 'text-white', 'border-emerald-600');
+                    countAnswered++;
+                } else if (isVisited) {
+                    btn.classList.add('bg-rose-500', 'text-white', 'border-rose-600');
+                    countNotAnswered++;
+                } else {
+                    btn.classList.add('bg-slate-200', 'text-slate-700', 'border-slate-300');
+                    countNotVisited++;
+                }
+
+                if (idx === currentQIndex) {
+                    btn.classList.add('ring-2', 'ring-teal-700', 'ring-offset-1', 'scale-110');
+                }
+
+                btn.innerText = idx + 1;
+                btn.onclick = () => loadQuestion(idx);
+                paletteGrid.appendChild(btn);
+            });
+
+            document.getElementById('countAnswered').innerText = countAnswered;
+            document.getElementById('countNotAnswered').innerText = countNotAnswered;
+            document.getElementById('countMarked').innerText = countMarked;
+            document.getElementById('countNotVisited').innerText = countNotVisited;
+        }
+
+        function loadQuestion(idx) {
+            currentQIndex = idx;
+            visitedQuestions[idx] = true;
+
+            document.getElementById('questionNumberBadge').innerText = `Question ${idx + 1} of 45`;
+            document.getElementById('prevBtn').disabled = (idx === 0);
+
+            const q = shuffledQuestions[idx];
+            const area = document.getElementById('questionContentArea');
+            area.innerHTML = '';
+
+            let html = '';
+
+            // Case Study Prompt Banner
+            if (q.type === 'case') {
+                html += `<div class="mb-4 bg-teal-50 border border-teal-200 p-3.5 rounded-xl text-xs text-teal-950">
+                    <h3 class="font-extrabold text-teal-900 border-b border-teal-200 pb-1 mb-1.5"><i class="fa-solid fa-book-open mr-1.5"></i> ${q.caseTitle}</h3>
+                    <p class="leading-relaxed font-medium">${q.caseText}</p>
+                </div>`;
+            }
+
+            // Question Text
+            html += `<h2 class="text-sm md:text-base font-bold text-slate-800 mb-3 leading-snug">${q.q}</h2>`;
+
+            // Statements Rendering
+            if (q.type === 'statement') {
+                html += `<div class="mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2 text-xs md:text-sm text-slate-800">
+                    <p><strong>Statement I:</strong> ${q.statement1}</p>
+                    <p><strong>Statement II:</strong> ${q.statement2}</p>
+                </div>`;
+            }
+
+            // Options List
+            html += `<div class="space-y-2.5 mt-4">`;
+            q.options.forEach((opt, oIdx) => {
+                const isSelected = userAnswers[idx] === oIdx;
+                html += `
+                    <label onclick="selectOption(${oIdx})" class="flex items-start space-x-3 p-3 rounded-xl border cursor-pointer transition-all text-xs md:text-sm ${
+                        isSelected ? 'bg-teal-50 border-teal-600 text-teal-950 font-semibold ring-1 ring-teal-500' : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700'
+                    }">
+                        <input type="radio" name="qOpt" ${isSelected ? 'checked' : ''} class="mt-0.5 text-teal-600 focus:ring-teal-500">
+                        <span class="flex-1">${opt}</span>
+                    </label>
+                `;
+            });
+            html += `</div>`;
+
+            area.innerHTML = html;
+            renderPalette();
+
+            // Re-render MathJax formulas on screen
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([area]);
+            }
+        }
+
+        function selectOption(oIdx) {
+            userAnswers[currentQIndex] = oIdx;
+            delete markedForReview[currentQIndex];
+            loadQuestion(currentQIndex);
+        }
+
+        function clearResponse() {
+            delete userAnswers[currentQIndex];
+            delete markedForReview[currentQIndex];
+            loadQuestion(currentQIndex);
+        }
+
+        function markForReview() {
+            markedForReview[currentQIndex] = true;
+            renderPalette();
+            nextQuestion();
+        }
+
+        function prevQuestion() {
+            if (currentQIndex > 0) {
+                loadQuestion(currentQIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQIndex < shuffledQuestions.length - 1) {
+                loadQuestion(currentQIndex + 1);
+            }
+        }
+
+        function confirmSubmitTest() {
+            const attempted = Object.keys(userAnswers).length;
+            if (confirm(`Are you sure you want to submit your Chemistry exam?\n\nTotal Attempted: ${attempted} / 45`)) {
+                forceSubmitTest();
+            }
+        }
+
+        function forceSubmitTest() {
+            examSubmitted = true;
+            clearInterval(timerInterval);
+
+            // Calculate Marks (+4 correct, -1 wrong, 0 unattempted)
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unattemptedCount = 0;
+
+            shuffledQuestions.forEach((q, idx) => {
+                const ans = userAnswers[idx];
+                if (ans === undefined) {
+                    unattemptedCount++;
+                } else if (ans === q.correct) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+            });
+
+            const totalScore = (correctCount * 4) - (incorrectCount * 1);
+            const totalAttempted = correctCount + incorrectCount;
+            const accuracy = totalAttempted > 0 ? ((correctCount / totalAttempted) * 100).toFixed(1) : 0;
+
+            // Display Score Summary
+            document.getElementById('resTotalScore').innerText = `${totalScore} / 180`;
+            document.getElementById('resAttempted').innerText = `${totalAttempted} / 45`;
+            document.getElementById('resAccuracy').innerText = `${accuracy}%`;
+            document.getElementById('resCorrect').innerText = correctCount;
+            document.getElementById('resIncorrect').innerText = incorrectCount;
+            document.getElementById('resUnattempted').innerText = unattemptedCount;
+
+            // Display Results Modal
+            document.getElementById('resultModal').classList.remove('hidden');
+
+            // Render Chart.js Graphical Analysis
+            renderChart(correctCount, incorrectCount, unattemptedCount);
+        }
+
+        function renderChart(correct, incorrect, unattempted) {
+            const ctx = document.getElementById('resultChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Correct (+4)', 'Incorrect (-1)', 'Unattempted'],
+                    datasets: [{
+                        data: [correct, incorrect, unattempted],
+                        backgroundColor: ['#10b981', '#f43f5e', '#cbd5e1'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { size: 11, weight: 'bold' },
+                                boxWidth: 12
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function sendMarksToWhatsApp() {
+            const card = document.getElementById('resultCardCapture');
+
+            // Convert Scorecard DOM element to high-resolution PNG image
+            html2canvas(card, { scale: 2 }).then(canvas => {
+                const imageBase64 = canvas.toDataURL("image/png");
+
+                // Prepare WhatsApp Pre-filled message with breakdown
+                const scoreText = document.getElementById('resTotalScore').innerText;
+                const accuracyText = document.getElementById('resAccuracy').innerText;
+                const correct = document.getElementById('resCorrect').innerText;
+                const incorrect = document.getElementById('resIncorrect').innerText;
+
+                const msg = encodeURIComponent(
+                    `*NEET CHEMISTRY CBT EXAM RESULT REPORT*\n` +
+                    `*Topic:* NEET CHEMISTRY XII EXAM SERIES 6 SET A (Aldehydes, Ketones, Carboxylic Acids & Amines)\n` +
+                    `*Candidate Name:* ${candidateName}\n` +
+                    `*Total Score:* ${scoreText}\n` +
+                    `*Accuracy:* ${accuracyText}\n` +
+                    `*Correct Answers:* ${correct}\n` +
+                    `*Incorrect Answers:* ${incorrect}\n\n` +
+                    `_Sir, I have completed my CBT Chemistry exam. Attached is my score summary card screenshot._`
+                );
+
+                const waUrl = `https://api.whatsapp.com/send?phone=918910587106&text=${msg}`;
+                
+                // Prompt candidate to download screenshot image
+                const link = document.createElement('a');
+                link.download = `${candidateName.replace(/\s+/g, '_')}_NEET_Chemistry_Result.png`;
+                link.href = imageBase64;
+                link.click();
+
+                // Open WhatsApp chat window
+                window.open(waUrl, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>
